@@ -4,5 +4,8 @@ plz add config.yaml and add tokens in this format:
 tokens:
 - Bearer xxxxx
 
-- go build -o ./<name>
-- ./<name> stresstest <URL> <INT>
+then
+
+
+go build -o ./<name>
+./<name> stresstest <URL> <num of requests>
