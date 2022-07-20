@@ -8,4 +8,5 @@ then
 
 
 go build -o ./<name>
-./<name> stresstest <URL> <num of requests>
+
+./<name> stresstest <URL> <INT>
