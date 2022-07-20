@@ -8,7 +8,8 @@ tokens:
 
 then
 
-
+```
 go build -o ./<name>
 
 ./<name> stresstest <URL> <INT>
+```
