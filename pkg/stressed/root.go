@@ -72,7 +72,6 @@ func StressTest(URL string, flag string) (metrics map[string]interface{}) {
 	}
 
 	for i := 0; i < f; i++ {
-		//tokens := [1]string{"Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjU5NjZjMjcyODJiZTJhYmQ1YThmNmU3NTFlYzU4MmUzIiwidHlwIjoiSldUIn0.eyJleHAiOjE2NTgzMDk5MjcsImZhbWlseV9uYW1lIjoiVGVjaCBtYWlsIiwiZnVsbF9uYW1lIjoidW5pY2UgVGVjaCBtYWlsIiwiZ2l2ZW5fbmFtZSI6InVuaWNlIiwiaGVhcmluZ19pZCI6W10sImlhdCI6MTY1ODMwNjMyNywiaXNzIjoiYXV0aFNlcnZpY2UiLCJuYmYiOjE2NTgzMDYzMjcsInNlc3Npb25faWQiOltdLCJ1c2VyX2VtYWlsIjoidW5haXMudGVjaHVuaWNvcm5AZ21haWwuY29tIiwidXNlcl9pZCI6IjJlNjhhNmFiLWUzMDEtNDk3OC1hODhiLWVkNzhjYWQzMGE1MiJ9.y16zDY9OuK50WDpc0Pu4ZbKuiXLXn7hK0MAcvB9VH9_SngWnlC6RLNLEpuXlkJpu0bN66d8IjFNDuwYHAVAmcMtDEN_r1FakRt1jLIJSxycG6KyXiDYozPdX7ZDBcuOvwVhtsNWWsKWLZP6gcKR7R4yzmIBMFkt8BQpq-N7XqcRIocfSmxsIDvxwTxzIIWVnTPkFW-vcN-mfls1Xa5lpCpT_L-3DSzSr59OA9LC3UAcDpDrr2g7jOSIghd7nn2vf1O_7kCJJgXjvVHep-4wW0SnEeCaSkNRmVNZcEuusnNXryDtHDXzP4eeFG8WcECSKOlqwEQdUUdLUuVMrdMOLUkdHDrysChf6DXUsPPP2UFc0lbtu9J5tnNnkagIhJ8kn19uYwZcQbnckoNVL7kiNQz4TL3wdbvWVqqFBpT66cLoRfOuB50nnkijl8KUqPoGmr6QJxTCj0i_jxsqpNFQjXk_sQ0m295oo_oTvckoxlfp3fFP3P4UgOBXodhA9_CT-"}
 		go testAsync(URL, c.Tokens[rand.Intn(len(c.Tokens))], metricsChannel)
 		metrics := <-metricsChannel //return strings from channels
 		fmt.Println("--------------------")
